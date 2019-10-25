@@ -1,0 +1,59 @@
+#1 Assignment
+def print_string(*args,sep=' ',end='\n'):
+    
+    string=''
+    if end == '\n' and sep==' ':
+        for i in range(len(args)):
+            string+=args[i]
+            string+=sep
+        string=string.rstrip()
+        string+=r'\n'
+        print(string)
+        
+  
+    elif end != '\n':
+        for i in range(len(args)):
+            string+=args[i]
+            string+=sep
+        string+=end
+        print(string)
+   
+    else:
+        for i in range(len(args)):
+            string+=args[i]
+            string+=sep
+        string+=r'\n'
+        print(string)
+            
+print_string('This is a test')
+print_string('This', 'is', 'a', 'test')
+print_string('This','is','a','test',sep='-')
+print_string('This','is','a','test',',',',','Yes',sep='_',end='.')
+
+
+
+
+##Assignment 2_1
+n = int(input('输入一个数字: '))
+a, b = 0, 1
+print(a, end=' ')
+for i in range(n-1):
+    print(b, end=' ')
+    a, b= b, a+b
+    
+##Assignment 2_2
+n = int(input('输入一个数字: '))
+a=[0,1]
+for i in range(n-2):
+    a.append(a[-2]+a[-1])
+print(a)
+
+##Assignment 2_2
+n = int(input('输入一个数字: '))
+a, b = 0, 1
+print(a, b, end=' ')
+for i in range(n-2):
+    c= a+b
+    print(c, end=' ')
+    a=b
+    b=c
